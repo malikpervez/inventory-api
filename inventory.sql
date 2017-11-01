@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS inventory;
-CREATE DATABASE inventory;
+DROP DATABASE IF EXISTS inventories;
+CREATE DATABASE inventories;
 
-\c inventory;
+\c inventories;
 
 CREATE TABLE inventory (
   ID SERIAL PRIMARY KEY,
