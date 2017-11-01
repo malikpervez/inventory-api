@@ -16,21 +16,8 @@ module.exports = {
   getAllInventory: getAllInventory,
   getSingleInventory: getSingleInventory,
   createInventory: createInventory,
+  updateInventory: updateInventory,
   removeInventory: removeInventory
 };
 
 //Get all inventory
-function getAllInventory(req, res, next) {
-  db.any('select * from inventory')
-    .then(function (data) {
-      res.status(200)
-        .json({
-          status: 'success',
-          data: data,
-          message: 'Retrieved ALL inventory'
-        });
-    })
-    .catch(function (err) {
-      return next(err);
-    });
-}
